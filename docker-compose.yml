@@ -1,8 +1,10 @@
 version: '3.5'
 
 services:
-    lab:
-        build: .
+    vad:
+        build:
+            context: .
+            dockerfile: envs/vad.Dockerfile
         volumes:
             # Mount present working directory to /home/jovyan/work
             - ${PWD}:/home/jovyan/work
