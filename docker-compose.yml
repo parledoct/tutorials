@@ -1,6 +1,9 @@
 version: '3.5'
 
 services:
+    hello:
+        image: library/hello-world
+        
     vad:
         build:
             context: .
