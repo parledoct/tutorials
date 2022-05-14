@@ -3,6 +3,16 @@ version: '3.5'
 services:
     hello:
         image: library/hello-world
+
+    base:
+        image: jupyter/base-notebook:python-3.8.5
+        volumes:
+            # Mount present working directory to /home/jovyan/work
+            - .:/home/jovyan/work
+        working_dir: /home/jovyan/work
+        ports:
+            - "8888:8888"
+        entrypoint: ["jupyter", "lab"]
         
     vad:
         build:
@@ -10,7 +20,7 @@ services:
             dockerfile: envs/vad.Dockerfile
         volumes:
             # Mount present working directory to /home/jovyan/work
-            - ${PWD}:/home/jovyan/work
+            - .:/home/jovyan/work
         # Start up jupyter lab inside /home/jovyan/work
         working_dir: /home/jovyan/work
         ports:
