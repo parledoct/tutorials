@@ -13,7 +13,20 @@ services:
         ports:
             - "8888:8888"
         entrypoint: ["jupyter", "lab"]
-        
+
+    pydub:
+        build:
+            context: .
+            dockerfile: envs/pydub.Dockerfile
+        volumes:
+            # Mount present working directory to /home/jovyan/work
+            - .:/home/jovyan/work
+        # Start up jupyter lab inside /home/jovyan/work
+        working_dir: /home/jovyan/work
+        ports:
+            - "8888:8888"
+        entrypoint: ["jupyter", "lab"]
+
     vad:
         build:
             context: .
