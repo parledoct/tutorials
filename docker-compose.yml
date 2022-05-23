@@ -15,4 +15,4 @@ services:
             - .:/parledoct-tutorials
         working_dir: /parledoct-tutorials
         ports:
-            - "8888:8888"
+            - "29796:29796"

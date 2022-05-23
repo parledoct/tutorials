@@ -51,9 +51,9 @@ RUN echo "**** install dev packages ****" && \
     mkdir -p "$CONDA_DIR/locks" && \
     chmod 777 "$CONDA_DIR/locks"
 
-EXPOSE 8888
+EXPOSE 29796
 
-CMD jupyter lab --ip=* --allow-root --port=8888 --no-browser --notebook-dir=/parledoct-tutorials
+CMD jupyter lab --ip=* --allow-root --port=29796 --no-browser --notebook-dir=/parledoct-tutorials
 
 #########################################################################################################
 #                                                                                                       #
