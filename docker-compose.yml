@@ -1,10 +1,8 @@
-version: '3.5'
+version: '3.8'
 
 services:
     tutorial:
-        # Uncomment build for debugging/development
-        # build: .
-        image: parledoct/alpine-miniconda-jupyterlab:speechbrain-spectralcluster
+        image: parledoct/tutorials:speaker-diarisation
         volumes:
             - .:/parledoct-tutorials
         working_dir: /parledoct-tutorials
