@@ -1,8 +1,16 @@
-version: '3.5'
+version: '3.8'
+
+# Run with environment variable TAG, e.g.:
+#
+# TAG=tutorials-base docker-compose up
+#
+# for applicable tags, see the Dockerfile build stages 'FROM ... AS tag'
 
 services:
-    tutorial:
-        image: parledoct/alpine-miniconda-jupyterlab:latest
+    debug:
+        build:
+            context: .
+            target: ${TAG}
         volumes:
             - .:/parledoct-tutorials
         working_dir: /parledoct-tutorials
