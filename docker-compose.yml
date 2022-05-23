@@ -1,8 +1,8 @@
-version: '3.5'
+version: '3.8'
 
 services:
     tutorial:
-        image: parledoct/alpine-miniconda-jupyterlab:latest
+        image: parledoct/tutorials:base
         volumes:
             - .:/parledoct-tutorials
         working_dir: /parledoct-tutorials
