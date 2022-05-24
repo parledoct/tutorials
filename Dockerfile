@@ -35,6 +35,7 @@ RUN echo "**** install dev packages ****" && \
     \
     echo "**** setup python packages ****" && \
     python3 -m pip --no-cache-dir install \
+        numpy \
         pympi-ling \
         jupyter \
         jupyterlab && \
@@ -70,7 +71,7 @@ RUN apk add --no-cache ffmpeg parallel && \
 ## Image config for voice activity detection tutorials
 FROM tutorials-base AS voice-activity-detection
 
-RUN pip install auditok
+RUN pip install auditok matplotlib
 
 ## Image config for speaker diarisation tutorials
 FROM tutorials-base AS speaker-diarisation
