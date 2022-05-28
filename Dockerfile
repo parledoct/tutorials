@@ -1,4 +1,4 @@
-FROM jupyter/jupyter/base-notebook:lab-3.4.2
+FROM jupyter/base-notebook:lab-3.4.2
 
 # Change to root to install packages
 USER root
