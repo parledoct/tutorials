@@ -1,4 +1,3 @@
 FROM jupyter/base-notebook:lab-3.4.2
 
-RUN pip ipywidgets
-
+RUN pip install ipywidgets
