@@ -1,4 +1,4 @@
-FROM jupyter/base-notebook:python-3.8.5
+FROM jupyter/jupyter/base-notebook:lab-3.4.2
 
 # Change to root to install packages
 USER root
@@ -11,6 +11,6 @@ RUN apt-get install -y unzip
 # See https://github.com/jupyter/docker-stacks/issues/358
 USER jovyan
 
-RUN pip install auditok pympi-ling matplotlib
+RUN pip install auditok pympi-ling matplotlib ipywidgets
 
 WORKDIR /home/jovyan/work
