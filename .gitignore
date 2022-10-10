@@ -3,3 +3,4 @@ data/*
 tmp/*
 !data/.gitkeep
 !tmp/.gitkeep
+!data/one_two_three.wav
